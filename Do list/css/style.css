@@ -1,0 +1,154 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  :root{
+    --main-bg-color: #ecf0f1;
+    --main-color: #2980b9;
+  }
+  .container{
+    width: 80%;
+    margin: auto;
+  }
+  .row{
+    display: flex;
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
+    height: 85vh;
+}
+  
+ 
+  .first{
+    padding: 30px 30px;  
+    width: 50%;
+    background-color: var(--main-bg-color);
+  }
+  .second{
+    width: 50%;
+    padding: 0 30px;
+    height: 85vh;
+    overflow: scroll;
+    
+  }
+  
+  .second::-webkit-scrollbar{
+    width: 10px;
+  }
+  .second::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+  }
+  
+
+ 
+  form label{
+    font-size: 20px;
+  }
+
+  .delete{
+    position: absolute;
+    left: -50px;
+    top: 3px;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(150, 10, 10);
+    padding: 10px;
+    transition: all 0.5s;
+    z-index: 3;
+  }
+  .names{
+      position: relative;
+      left: 12%;
+      text-align: center;
+      color: #444;
+      background-color: #eee;
+      width: 70%;
+      justify-content: center;
+      padding: 18px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+      font-size: 18px;
+      transition: all 0.5s;
+      border-bottom: 1px solid rgb(184, 178, 178);
+     overflow: hidden;
+  }
+
+  .names:after {
+    content: '\02795';
+    font-size: 10px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+  .phone{
+    display: none;
+    position: relative;
+    width: 75%;
+    transition: all 0.5s;
+    padding: 15px 5px;
+    left: 12%;
+}
+  .active{
+    background-color: #ccc;
+  }
+  .name:hover{
+    background-color: #ccc;
+  }
+  .names:hover .delete{
+    left: 0px;
+    background-color: rgb(150, 10, 10);
+  }
+  .active:after{
+    content:"\2796";
+  }
+
+  /*         Form               */
+  
+  h1{
+ 
+    text-align: center;
+    color: var(--main-color);
+  }
+  form input[type=text],input[type=password],input[type=number],input[type=date],select{
+    width: 90%;
+    padding: 12px 20px;
+    margin-bottom: 30px;
+  }
+  form input[type=submit]{
+    border: none;
+    float: right;
+    padding: 12px 40px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 70px;
+    color: white;
+    background-color: var(--main-color);
+    cursor: pointer;
+  }
+  form::after{
+    content: '';
+    display: table;
+    clear: both;
+
+  }
+  @media screen and (max-width : 850px){
+    
+    .row{
+      height: auto;
+      flex-wrap: wrap;
+    }
+    .first{
+      width: 100%;
+    }
+    .second{
+      width: 100%;
+    }
+    form input[type=submit]{
+      margin: 0 50%;
+      transform: translate(-50%, 0%);
+      float: none;
+      
+    }
+  }
